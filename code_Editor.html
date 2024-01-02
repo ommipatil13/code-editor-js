@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background: rgba(126, 190, 190, 0.5);
+        }
+
+        .mainarea {
+            display: flex;
+            /* justify-content: space-around; */
+        }
+
+        .editors {
+            width: 100vw;
+            /* background-color: lightseagreen; */
+            /* padding: 0 1vw; */
+        }
+
+        textarea {
+            width: 30vw;
+            min-height: 18vw;
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            font-size: x-large;
+            background: transparent;
+            /* color: white; */
+
+        }
+
+        iframe {
+            width: 80vw;
+            height: 25vw;
+            /* color: white; */
+            background-color: white;
+
+        }
+
+        img {
+            height: 6vw;
+        }
+
+        .output {
+            /* color: white; */
+            /* background-color: lightseagreen; */
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            .mainarea {
+                display: grid;
+                gap: 2vw;
+
+            }
+
+            textarea {
+                width: 70%;
+                height: 22vh;
+
+            }
+
+            iframe {
+                height: 30vh;
+            }
+
+            img {
+                margin-bottom: 16vw;
+                height: 15vw;
+            }
+
+            .editors {
+                margin-top: 2vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Code Editor</h1>
+
+    <div class="mainarea">
+
+        <div class="editors">
+            <img src="html.png">
+            <textarea id="html" placeholder="HTML"></textarea>
+        </div>
+
+        <div class="editors">
+            <img src="css.png">
+            <textarea id="css" placeholder="CSS"></textarea>
+        </div>
+
+        <div class="editors">
+            <img src="js.png">
+            <textarea id="js" placeholder="JS"></textarea>
+        </div>
+
+    </div>
+
+    <div class="output">
+        <h1>Output</h1>
+        <iframe id="code"></iframe>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script type="text/JavaScript" src="code_Editor.js"> </script>
+
+
+</body>
+
+</html>
